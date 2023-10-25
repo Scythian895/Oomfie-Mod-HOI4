@@ -1,0 +1,173 @@
+add_namespace = rus_russia
+
+#Novorossiya Rises Up
+country_event = {
+	id = rus_russia.1
+	title = rus_russia.1.t
+	desc = rus_russia.1.d
+
+	picture = rus_novorossiya_rises_up-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 10
+	major = yes
+	option = {
+		name = rus_russia.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		transfer_state = 227
+transfer_state = 228
+
+		hidden_effect = {
+			country_event = {
+    id = rus_russia.2
+}
+		}
+	}
+}
+
+#[ HIDDEN ] Novorossiya Puppet Event.
+country_event = {
+	id = rus_russia.2
+	title = rus_russia.2.t
+	desc = rus_russia.2.d
+
+	picture = rus_hiddennovorossiyapuppetevent-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 1
+	hidden = yes
+	option = {
+		name = rus_russia.2.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			release_puppet_on_controlled = NOV
+		}
+	}
+}
+
+#Russian Victory
+news_event = {
+	id = rus_russia.3
+	title = rus_russia.3.t
+	desc = rus_russia.3.d
+
+	picture = rus_russian_victory-560375
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = rus_russia.3.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			country_event = {
+    id = rus_russia.4
+}
+
+
+
+		}
+	}
+}
+
+#[ HIDDEN ] Ukraine White Peace
+country_event = {
+	id = rus_russia.4
+	title = rus_russia.4.t
+	desc = rus_russia.4.d
+
+	picture = rus_hiddenukrainewhitepeace-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = rus_russia.4.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		white_peace = UKR
+
+country_event = {
+    id = rus_russia.5
+}
+
+
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#[ HIDDEN ] Auto Peace Deal
+country_event = {
+	id = rus_russia.5
+	title = rus_russia.5.t
+	desc = rus_russia.5.d
+
+	picture = rus_hiddenautopeacedeal-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = rus_russia.5.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		NOV = {
+	transfer_state = 221
+	transfer_state = 226
+	transfer_state = 200
+	transfer_state = 196
+	transfer_state = 197
+	transfer_state = 192
+	transfer_state = 834
+	transfer_state = 766
+}
+
+
+
+POL = {
+	transfer_state = 91
+
+	transfer_state = 89
+
+
+}
+ROM = {
+	transfer_state = 80
+
+
+}
+BLR = {
+	add_state_core = 93
+
+	transfer_state = 93
+
+}
+RUS= {
+	puppet = UKR
+}
+
+UKR = {
+	set_cosmetic_tag = MLR_UKR
+
+
+}
+
+		hidden_effect = {
+			
+		}
+	}
+}

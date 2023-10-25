@@ -1,0 +1,117 @@
+focus_tree = {
+	id = 1244
+	continuous_focus_position = { x = -40 y = 3910 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SER
+		}
+	}
+	#KLA Crushed
+	focus = {
+		id = SER_kla_crushed
+		icon = GFX_goal_unknown
+		x = 28
+		y = 9
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SER_no_mercy_for_terrorists  }
+		mutually_exclusive = { focus = SER_compromise_found  }
+	}
+
+	#Unity over Division
+	focus = {
+		id = SER_unity_over_division
+		icon = GFX_goal_unknown
+		x = 16
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = SER_deal_with_the_kla  }
+		mutually_exclusive = { focus = SER_no_mercy_for_terrorists  }
+	}
+
+	#Reintegrate Mitrovica
+	focus = {
+		id = SER_reintegrate_mitrovica
+		icon = GFX_goal_unknown
+		x = 20
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = SER_followourbigbrothersexample  }
+	}
+
+	#Deal with the KLA
+	focus = {
+		id = SER_deal_with_the_kla
+		icon = GFX_goal_unknown
+		x = 20
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SER_reintegrate_mitrovica  }
+	}
+
+	#No Mercy for Terrorists
+	focus = {
+		id = SER_no_mercy_for_terrorists
+		icon = GFX_goal_unknown
+		x = 24
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = SER_deal_with_the_kla  }
+		mutually_exclusive = { focus = SER_unity_over_division  }
+	}
+
+	#Compromise found
+	focus = {
+		id = SER_compromise_found
+		icon = GFX_goal_unknown
+		x = 20
+		y = 9
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SER_no_mercy_for_terrorists  } prerequisite = { focus = SER_unity_over_division  }
+		mutually_exclusive = { focus = SER_kla_crushed  } mutually_exclusive = { focus = SER_albanianvictory  }
+	}
+
+	#Albanian Victory...
+	focus = {
+		id = SER_albanianvictory
+		icon = GFX_goal_unknown
+		x = 12
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SER_unity_over_division  }
+		mutually_exclusive = { focus = SER_compromise_found  }
+	}
+
+	#Follow our Big Brother's Example
+	focus = {
+		id = SER_followourbigbrothersexample
+		icon = GFX_goal_unknown
+		x = 20
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+
+}

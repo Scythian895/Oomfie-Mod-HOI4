@@ -1,0 +1,253 @@
+focus_tree = {
+	id = rus
+	continuous_focus_position = { x = -40 y = 1050 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUS
+		}
+	}
+	#Preparations for War
+	focus = {
+		id = RUS_preparations_for_war
+		icon = GFX_RUS_preparations_for_war-538668
+		x = 27
+		y = 0
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			random_owned_controlled_state = {
+			limit = {
+			free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+			}
+			}
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+			type = arms_factory
+			level = 5
+			instant_build = yes
+			}
+			set_state_flag = 7000
+			}
+			
+		}
+	}
+
+	#Employ PMC "Wagner"
+	focus = {
+		id = RUS_employpmcwagner
+		icon = GFX_RUS_employpmcwagner-538694
+		x = 27
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_full_mobilization  }
+	}
+
+	#Full Mobilization
+	focus = {
+		id = RUS_full_mobilization
+		icon = GFX_RUS_full_mobilization-538674
+		x = 27
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_preparations_for_war  }
+		completion_reward = {
+			add_ideas = {
+			    war_economy
+			    extensive_conscription
+			}
+			
+			
+			
+		}
+	}
+
+	#Support Donbass Separatist
+	focus = {
+		id = RUS_support_donbass_separatist
+		icon = GFX_RUS_support_donbass_separatist-538709
+		x = 27
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_employpmcwagner  }
+		completion_reward = {
+			country_event = {
+			    id = rus_russia.1
+			}
+			
+			
+			
+		}
+	}
+
+	#§RTotal War.
+	focus = {
+		id = RUS_ssrtotalwar
+		icon = GFX_RUS_ssrtotalwar-538736
+		x = 27
+		y = 5
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = RUS_support_donbass_separatist  }
+		completion_reward = {
+			declare_war_on = {
+			    target = UKR
+			    type = annex_everything
+			}
+			
+			activate_mission = tempo_of_the_ukraine_war
+			
+			
+		}
+		will_lead_to_war_with = UKR
+	}
+
+	#Reintegration
+	focus = {
+		id = RUS_reintegration
+		icon = GFX_RUS_reintegration-539136
+		x = 27
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_nitro_consolidates_power  }
+	}
+
+	#Reopen Vorkutlag
+	focus = {
+		id = RUS_reopen_vorkutlag
+		icon = GFX_RUS_reopen_vorkutlag-560244
+		x = 25
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_reintegration  }
+	}
+
+	#The Enemy Within.
+	focus = {
+		id = RUS_the_enemy_within
+		icon = GFX_goal_unknown
+		x = 26
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_reopen_vorkutlag  }
+	}
+
+	#Sterilize Minorities
+	focus = {
+		id = RUS_sterilize_minorities
+		icon = GFX_RUS_sterilize_minorities-539419
+		x = 24
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_reopen_vorkutlag  }
+	}
+
+	#Nitro Consolidates Power
+	focus = {
+		id = RUS_nitro_consolidates_power
+		icon = GFX_goal_unknown
+		x = 27
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_the_calm_before_the_storm  }
+		mutually_exclusive = { focus = RUS_wagner_coup  } mutually_exclusive = { focus = RUS_second_russian_revolution  } mutually_exclusive = { focus = RUS_rusich_putsch  } mutually_exclusive = { focus = RUS_deathly_silence  }
+	}
+
+	#Wagner Coup
+	focus = {
+		id = RUS_wagner_coup
+		icon = GFX_goal_unknown
+		x = 18
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_the_calm_before_the_storm  }
+		mutually_exclusive = { focus = RUS_nitro_consolidates_power  } mutually_exclusive = { focus = RUS_second_russian_revolution  } mutually_exclusive = { focus = RUS_rusich_putsch  } mutually_exclusive = { focus = RUS_deathly_silence  }
+	}
+
+	#Second Russian Revolution
+	focus = {
+		id = RUS_second_russian_revolution
+		icon = GFX_goal_unknown
+		x = 10
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_the_calm_before_the_storm  }
+		mutually_exclusive = { focus = RUS_nitro_consolidates_power  } mutually_exclusive = { focus = RUS_wagner_coup  } mutually_exclusive = { focus = RUS_rusich_putsch  } mutually_exclusive = { focus = RUS_deathly_silence  }
+	}
+
+	#Rusich Putsch
+	focus = {
+		id = RUS_rusich_putsch
+		icon = GFX_goal_unknown
+		x = 36
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_the_calm_before_the_storm  }
+		mutually_exclusive = { focus = RUS_nitro_consolidates_power  } mutually_exclusive = { focus = RUS_wagner_coup  } mutually_exclusive = { focus = RUS_second_russian_revolution  } mutually_exclusive = { focus = RUS_deathly_silence  }
+	}
+
+	#The Calm before the Storm
+	focus = {
+		id = RUS_the_calm_before_the_storm
+		icon = GFX_goal_unknown
+		x = 27
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_ssrtotalwar  }
+	}
+
+	#Deathly Silence
+	focus = {
+		id = RUS_deathly_silence
+		icon = GFX_goal_unknown
+		x = 45
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = RUS_the_calm_before_the_storm  }
+		mutually_exclusive = { focus = RUS_nitro_consolidates_power  } mutually_exclusive = { focus = RUS_wagner_coup  } mutually_exclusive = { focus = RUS_second_russian_revolution  } mutually_exclusive = { focus = RUS_rusich_putsch  }
+	}
+
+}

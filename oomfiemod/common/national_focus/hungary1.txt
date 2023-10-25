@@ -1,0 +1,75 @@
+focus_tree = {
+	id = hungary1
+	continuous_focus_position = { x = -40 y = 1050 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HUN
+		}
+	}
+	#Just... Be yourself?
+	focus = {
+		id = HUN_justbeyourself
+		icon = GFX_focus_hun_elect_a_king
+		x = 7
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = HUN_national_identity_crisis  }
+	}
+
+	#Turk LARP
+	focus = {
+		id = HUN_turk_larp
+		icon = GFX_focus_TUR_turanist_ambition
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = HUN_national_identity_crisis  }
+	}
+
+	#FinnLARP
+	focus = {
+		id = HUN_finnlarp
+		icon = GFX_focus_TUR_crowning_ourselves_with_the_fin_ugor
+		x = 5
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = HUN_national_identity_crisis  }
+	}
+
+	#National Identity Crisis
+	focus = {
+		id = HUN_national_identity_crisis
+		icon = GFX_goal_unknown
+		x = 4
+		y = 0
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Scythian LARP
+	focus = {
+		id = HUN_scythian_larp
+		icon = GFX_HUN_scythian_larp-262013
+		x = 3
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = HUN_national_identity_crisis  }
+	}
+
+}
