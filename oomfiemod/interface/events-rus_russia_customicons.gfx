@@ -1,0 +1,33 @@
+spriteTypes = { 
+	##Icon For: Novorossiya Rises Up
+	SpriteType = { 
+		name = "rus_novorossiya_rises_up-1"
+		texturefile = "gfx/interface/events/russia-event/rus_novorossiya_rises_up-1.dds"
+	}
+
+	##Icon For: [ HIDDEN ] Novorossiya Puppet Event.
+	SpriteType = { 
+		name = "rus_hiddennovorossiyapuppetevent-1"
+		texturefile = "gfx/interface/events/russia-event/rus_hiddennovorossiyapuppetevent-1.dds"
+	}
+
+	##Icon For: Russian Victory
+	SpriteType = { 
+		name = "rus_russian_victory-560375"
+		texturefile = "gfx/interface/events/russia-event/rus_russian_victory-560375.dds"
+	}
+
+	##Icon For: [ HIDDEN ] Ukraine White Peace
+	SpriteType = { 
+		name = "rus_hiddenukrainewhitepeace-1"
+		texturefile = "gfx/interface/events/russia-event/rus_hiddenukrainewhitepeace-1.dds"
+	}
+
+	##Icon For: [ HIDDEN ] Auto Peace Deal
+	SpriteType = { 
+		name = "rus_hiddenautopeacedeal-1"
+		texturefile = "gfx/interface/events/russia-event/rus_hiddenautopeacedeal-1.dds"
+	}
+
+ 
+ }

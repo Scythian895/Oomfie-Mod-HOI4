@@ -1,0 +1,20 @@
+spriteTypes = { 
+	##Icon For Category: The War in Ukraine
+	SpriteType = { 
+		name = "decision_category_icon_the_war_in_ukraine"
+		texturefile = "gfx/interface/decisions/decision_category_icon_the_war_in_ukraine.dds"
+	}
+
+	##Picture For: The War in Ukraine
+	SpriteType = { 
+		name = "decision_category_picture_the_war_in_ukraine"
+		texturefile = "gfx/interface/decisions/decision_category_picture_the_war_in_ukraine.dds"
+	}
+
+	##Icon For: Tempo of the Ukraine War
+	SpriteType = { 
+		name = "decision_icon_tempo_of_the_ukraine_war"
+		texturefile = "gfx/interface/decisions/decision_icon_tempo_of_the_ukraine_war.dds"
+	}
+
+}
