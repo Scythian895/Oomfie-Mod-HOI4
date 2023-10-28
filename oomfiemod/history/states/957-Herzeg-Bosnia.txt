@@ -1,0 +1,16 @@
+state={
+	id=957
+	name="STATE_957"
+	provinces={
+		3985 6957 9586 
+	}
+	history = {
+		owner = BOS
+		add_core_of = BOS
+		add_core_of = CRO
+}
+	manpower=5000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

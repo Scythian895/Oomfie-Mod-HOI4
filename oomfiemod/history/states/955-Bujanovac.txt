@@ -1,0 +1,16 @@
+state={
+	id=955
+	name="STATE_955"
+	provinces={
+		11832 
+	}
+	history = {
+		owner = SER
+		add_core_of = KOS
+		add_core_of = SER
+}
+	manpower=500
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,29 @@
+state={
+	id=941
+	name="STATE_941"
+	provinces={
+		657 687 3076 9635 
+	}
+buildings = {
+
+
+			dockyard = 1
+			657 = {
+				naval_base = 8
+
+			}
+			687 = {
+				naval_base = 1
+
+			}
+
+}
+	history = {
+		owner = ROM
+		add_core_of = ROM
+}
+	manpower=5000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

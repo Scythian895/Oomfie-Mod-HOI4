@@ -1,0 +1,17 @@
+
+state={
+	id=944
+	name="STATE_944"
+	provinces={
+		606 953 982 6619 6983 9588 9591 9922 11574 11741 11845 
+	}
+	history = {
+		owner = BOS
+		add_core_of = BOS
+		add_core_of = SER
+}
+	manpower=5000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

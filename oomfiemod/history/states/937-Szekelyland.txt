@@ -1,0 +1,16 @@
+state={
+	id=937
+	name="STATE_937"
+	provinces={
+		711 3689 9668 9670 
+	}
+	history = {
+		owner = ROM
+		add_core_of = HUN
+		add_core_of = ROM
+}
+	manpower=5000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
